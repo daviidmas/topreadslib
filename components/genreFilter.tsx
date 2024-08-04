@@ -6,7 +6,6 @@ import GenreCard from "./genreCard"
 export default async function GenreFilter() {
     const supabase = createClient()
     const {data: genres, error} = await supabase.from("genre").select("*")
-    console.log(genres)
     
     if(error) throw error
 
