@@ -1,7 +1,7 @@
-'use client'
 
 import BookCard from "@/components/bookCard";
-import { createClient } from "@/utils/supabase/client";
+import { createClient } from "@/utils/supabase/server";
+import { cookies } from "next/headers";
 
 export default async function BookList() {
     const supabase = createClient();
@@ -13,7 +13,6 @@ export default async function BookList() {
             <div className="grid-cols-3 grid gap-3">
                 {books?.map( 
                     (book) => {
-                        console.log(book)
                         return (
                             <BookCard key={book.id} name={book.name} image={book.image} numPages={book.num_pages} />
                         )
