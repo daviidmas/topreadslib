@@ -1,20 +1,28 @@
 import BookList from "@/components/bookList";
 import GenreFilter from "@/components/genreFilter";
+import { createClient } from "@/utils/supabase/server";
 
-export default  function Browse({searchParams} :
-  {searchParams? :
-    {
-      genre?: string;
-    }
-  }
-) {   
-  const genre = searchParams?.genre || '';
-  
+type Book = {
+  id: number;
+  name: string;
+  description: string;
+  num_pages: string;
+  author: string;
+  image: string;
+};
+
+export default async function Browse() {   
+  const supabase = createClient();
+  const { data: books } = await supabase.from("book").select().returns<Book[]>();
+  if (!books) return null; // Handle cases where books might be undefined or null
+
   return (
-      <div className="flex min-h-screen">
-        <GenreFilter />
-        <BookList genre={genre} />
-      </div>
-    );
-  }
-  
+    <div className="flex min-h-screen">
+        <section className="flex-1 p-5 bg-zinc-500">
+          <h1 className="text-xl text-slate-950 text-centesr mb-4">All Books</h1>
+          <BookList books={books} /> 
+      </section>
+    </div>
+    
+  );
+}

@@ -13,7 +13,7 @@ export default async function GenreFilter() {
         <section className="gap-6 bg-slate-700 p-8 text-slate-100">
             <h2 className="text-lg">Genres</h2>
             <hr />      
-            <div className="gap-4 mt-4">
+            <div className="flex flex-col gap-4 mt-4">
                 {
                     genres.map((genre) => {
                         return(
