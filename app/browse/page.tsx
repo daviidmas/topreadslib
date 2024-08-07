@@ -1,5 +1,4 @@
 import BookList from "@/components/bookList";
-import GenreFilter from "@/components/genreFilter";
 import { createClient } from "@/utils/supabase/server";
 
 type Book = {

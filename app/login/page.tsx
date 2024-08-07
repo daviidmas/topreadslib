@@ -1,6 +1,5 @@
 import { login, signup } from "./actions";
 
-
 export default function LoginPage() {
     return (
     <div className="flex items-center justify-center min-h-screen bg-slate-500 content-center">
