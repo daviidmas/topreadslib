@@ -15,14 +15,16 @@ const ListPage = async () => {
 
     return(
         <div className="min-h-screen bg-slate-700 text-white flex flex-col items-center p-5">
-            <h1>Reading List</h1>
-            {list?.map(
-                (item) => {
-                    return(
-                        <ItemCard key={item.id} bookId={item.book_id} pagesRead={item.pages_read} reading={item.reading} email={item.email}></ItemCard>
-                    )
-                }
-            )}
+            <h1 className="mb-6">Reading List</h1>
+            <div className="flex flex-col gap-6">
+                {list?.map(
+                    (item) => {
+                        return(
+                            <ItemCard key={item.id} bookId={item.book_id} pagesRead={item.pages_read} reading={item.reading} email={item.email}></ItemCard>
+                        )
+                    }
+                )}
+            </div>
         </div>
     )
 }

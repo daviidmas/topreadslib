@@ -7,7 +7,7 @@ interface AddToListProps {
     book_id: number;
     pages_read: number;
     reading: boolean;
-    email: string;
+    email: string | undefined;
 }
 
 const AddToList = (props: AddToListProps) => {
