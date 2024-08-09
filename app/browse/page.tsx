@@ -18,7 +18,9 @@ export default async function Browse() {
   return (
     <div className="flex min-h-screen">
         <section className="flex-1 p-5 bg-zinc-500">
-          <h1 className="text-xl text-slate-950 text-centesr mb-4">All Books</h1>
+          <div className="text-center mb-4 p-3 ml-5">
+            <h1 className="text-xl text-blue-200">All Books</h1>
+          </div>
           <BookList books={books} /> 
       </section>
     </div>

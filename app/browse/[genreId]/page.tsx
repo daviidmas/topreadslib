@@ -22,11 +22,12 @@ const GenrePage = async ({params}:
     return(
         <div className="flex min-h-screen">
             <section className="flex-1 p-5 bg-zinc-500">
-                <h1 className="text-xl text-slate-950 text-centesr mb-4">{params.genreId.charAt(0).toUpperCase() + params.genreId.slice(1).toLowerCase()} Books</h1>
+                <div className="text-center mb-4 p-3 ml-5">
+                    <h1 className="text-xl text-blue-200">{params.genreId.charAt(0).toUpperCase() + params.genreId.slice(1).toLowerCase()} Books</h1>
+                </div>
                 <BookList books={books}></BookList>
             </section>
         </div>
-        
     )
 }
 

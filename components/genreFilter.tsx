@@ -10,10 +10,10 @@ export default async function GenreFilter() {
     if(error) throw error
 
     return(
-        <section className="gap-6 bg-slate-700 p-8 text-slate-100">
-            <h2 className="text-lg">Genres</h2>
+        <section className="gap-6 bg-gray-700 p-7 text-center w-64 text-slate-100">
+            <h2 className="text-lg mb-3">Genres</h2>
             <hr />      
-            <div className="flex flex-col gap-4 mt-4">
+            <div className="flex flex-col gap-6 mt-9 items-center">
                 {
                     genres.map((genre) => {
                         return(

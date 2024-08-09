@@ -15,11 +15,11 @@ const LoginButton = (props :
 
     if(loginText==="Logout") {
         return(
-            <button onClick={handleClick}>{loginText}</button>
+            <button onClick={handleClick} className="hover:text-blue-700">{loginText}</button>
         )
     } else {
         return(
-            <Link href="/login" className="flex-none">{loginText}</Link>
+            <Link href="/login" className="flex-none hover:text-blue-700">{loginText}</Link>
         )
     }
 }

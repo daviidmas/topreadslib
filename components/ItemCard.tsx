@@ -1,5 +1,6 @@
 import { createClient } from "@/utils/supabase/server";
 import Image from "next/image";
+import RemoveItem from "./removeItem";
 
 interface ItemCardProps {
     key: number;
@@ -9,13 +10,6 @@ interface ItemCardProps {
     email: string;
 }
 
-type Book = {
-    name: string;
-    description: string;
-    num_pages: string;
-    author: string;
-    genre: string;
-}
 
 const ItemCard = async (props: ItemCardProps) => {
     const supabase = createClient()
@@ -29,6 +23,7 @@ const ItemCard = async (props: ItemCardProps) => {
                 <h1 className="text-xl font-bold">{book.name}</h1>
                 <h2 className="">{book.description}</h2>
                 <h3>Pages read: {props.pagesRead}/{book.num_pages}</h3>
+                <RemoveItem email={props.email} bookId={props.bookId}></RemoveItem>
             </div>
         </div>
     )

@@ -15,7 +15,7 @@ interface BookListProps {
   
   const BookList: React.FC<BookListProps> = ({ books }) => {
     return (
-        <div className="grid-cols-3 grid gap-3">
+        <div className="grid-cols-3 grid p-3 gap-3">
             {books?.map(  
                 (book) => {
                     return (       
