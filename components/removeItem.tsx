@@ -17,7 +17,7 @@ const RemoveItem = (props: RemoveitemProps) => {
     }
     
     return(
-        <button className="p-3 bg-red-700 text-white w-64 self-center" onClick={handleClick}>Remove from my list</button>
+        <button className="p-3 w-52 bg-red-700 text-whiteself-center rounded-md mt-8" onClick={handleClick}>Remove from my list</button>
     )
 }
 

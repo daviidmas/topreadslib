@@ -18,30 +18,15 @@ const AddToList = (props: AddToListProps) => {
 
     const [showModal, setShowModal] = useState(false)
         
-    const handleClick = async () => {
-        // const { error } = await supabase.from("list").insert(
-        //     {
-        //         book_id: props.book_id,
-        //         pages_read: props.pages_read,
-        //         reading: true,
-        //         email: props.email
-        //     }
-        // )
-
-        // if(error) {
-        //     console.log(error)
-        // }
-
-        
-        // router.push("/mylist")
-
-
+    const handleClick =  () => {
+        if(!props.email) router.push("/login")
+        setShowModal(true)
     }
         
     
     return(
         <div>
-            <button className="p-3 bg-red-400 w-52" onClick={() =>setShowModal(true)}>Add to my list</button>
+            <button className="p-3 bg-red-400 w-52 rounded-md" onClick={handleClick}>Add to my list</button>
             {showModal &&
                 <AddModal book_id={props.book_id} email={props.email} onClose={() =>setShowModal(false)}></AddModal>
             }

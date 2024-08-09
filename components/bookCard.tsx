@@ -21,11 +21,13 @@ export default function BookCard(props: BookCardProps) {
     }
 
     return (
-        <div className="border-4 p-4 bg-slate-400 border-blue-950 w-64">
-            <Image src={image} alt={name} width={200} height={200} ></Image>
-            <h1 className="text-2xl">{name}</h1>
-            <p className="text-xs">{numPages} pages.</p>
-            <button onClick={handleClick}>See more</button>
+        <div className="max-w-60 bg-gray-800  border border-gray-700 rounded-lg shadow">
+            <Image className="rounded-t-lg" src={image} alt={name} width={250} height={250} ></Image>
+            <div className="p-5">
+                {/* <h1 className="mb-2 text-2xl font-bold tracking-tight text-white">{name}</h1> */}
+                <p className="mb-3 font-normal text-gray-400">{numPages} pages</p>
+                <button className="inline-flex items-center px-3 py-2 text-sm rounded-lg font-medium text-center text-white bg-blue-600 hover:bg-blue-700 focus:ring-blue-800" onClick={handleClick}>See more</button>
+            </div>
         </div>
     )
 }

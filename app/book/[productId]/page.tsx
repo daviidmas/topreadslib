@@ -29,13 +29,13 @@ const BookPage: React.FC<BookPageProps> = async ({params}) => {
     return(
         <main className="min-h-screen bg-slate-200">
             <div className="flex p-5">
-                <Image src={book?.image} alt={book?.name} width={400} height={400}></Image>
+                <Image className="rounded-lg" src={book?.image} alt={book?.name} width={400} height={400}></Image>
                 <div className="p-5 gap-7 flex flex-col">
                     <h1 className="text-3xl font-bold">{book?.name}</h1>
                     <p>{book?.description}</p>
                     <h3 className="text-xl">{book?.num_pages} pages.</h3>
                     {
-                       listItem? <button className="p-3 bg-green-400 w-52" disabled>In my list</button>: <AddToList book_id={book.id} pages_read={123} reading={true} email={userEmail} ></AddToList>
+                       listItem? <button className="p-3 bg-green-400 w-52 rounded-md" disabled>In my list</button>: <AddToList book_id={book.id} pages_read={123} reading={true} email={userEmail} ></AddToList>
                     }
                     
                 </div>
