@@ -21,7 +21,9 @@ export default async function Browse() {
           <div className="text-center mb-4 p-3 ml-5">
             <h1 className="text-xl text-blue-200">All Books</h1>
           </div>
-          <BookList books={books} /> 
+          <div className="justify-center flex">
+            <BookList books={books} /> 
+          </div>
       </section>
     </div>
     
