@@ -1,5 +1,7 @@
 import GenreFilter from "@/components/genreFilter";
 
+export const runtime = "edge";
+
 export default function BrowseLayout({
     children,
   }: {

@@ -2,6 +2,8 @@ import ItemCard from "@/components/ItemCard"
 import { createClient } from "@/utils/supabase/server"
 import { redirect } from "next/navigation"
 
+export const runtime = "edge";
+
 const ListPage = async () => {
     const supabase = createClient()
 

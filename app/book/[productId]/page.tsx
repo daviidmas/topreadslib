@@ -2,7 +2,8 @@ import AddToList from "@/components/addToList";
 import { createClient } from "@/utils/supabase/server";
 import { PostgrestSingleResponse } from "@supabase/supabase-js";
 import Image from "next/image";
-import { redirect } from "next/navigation";
+
+export const runtime = "edge";
 
 interface BookPageProps {
     params: {
