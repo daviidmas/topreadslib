@@ -1,6 +1,8 @@
 import BookList from "@/components/bookList"
 import { createClient } from "@/utils/supabase/server"
 
+export const runtime = "edge";
+
 type Book = {
     id: number;
     name: string;
