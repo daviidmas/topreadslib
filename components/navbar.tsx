@@ -2,6 +2,8 @@ import Link from "next/link";
 import LoginButton from "./loginButton";
 import { createClient } from "@/utils/supabase/server";
 
+export const runtime = "edge";
+
 export default async function NavBar() {
     const supabase = createClient()
     let loginText = "Logout"

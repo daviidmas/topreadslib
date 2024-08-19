@@ -3,6 +3,9 @@
 import { logout } from "@/app/login/actions"
 import Link from "next/link"
 
+
+export const runtime = "edge";
+
 const LoginButton = (props :
     {text: string}
 ) => {

@@ -5,6 +5,9 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import AddModal from "./addModal";
 
+
+export const runtime = "edge";
+
 interface AddToListProps {
     book_id: number;
     pages_read: number;

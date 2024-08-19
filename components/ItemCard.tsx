@@ -2,6 +2,9 @@ import { createClient } from "@/utils/supabase/server";
 import Image from "next/image";
 import RemoveItem from "./removeItem";
 
+
+export const runtime = "edge";
+
 interface ItemCardProps {
     key: number;
     bookId: number;

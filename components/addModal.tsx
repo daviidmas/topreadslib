@@ -4,6 +4,9 @@ import { createClient } from "@/utils/supabase/client";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
+
+export const runtime = "edge";
+
 interface AddModalProps {
     onClose: Function;
     book_id: number;

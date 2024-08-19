@@ -1,5 +1,8 @@
 import BookCard from "@/components/bookCard";
 
+
+export const runtime = "edge";
+
 type Book = {
     id: number;
     name: string;

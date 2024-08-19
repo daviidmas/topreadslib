@@ -3,6 +3,8 @@ import { cookies } from "next/headers"
 import GenreCard from "./genreCard"
 
 
+export const runtime = "edge";
+
 export default async function GenreFilter() {
     const supabase = createClient()
     const {data: genres, error} = await supabase.from("genre").select("*")

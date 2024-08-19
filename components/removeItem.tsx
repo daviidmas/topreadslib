@@ -2,6 +2,9 @@
 
 import { createClient } from "@/utils/supabase/client"
 
+
+export const runtime = "edge";
+
 interface RemoveitemProps {
     email: string;
     bookId: number;

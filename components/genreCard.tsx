@@ -2,6 +2,8 @@
 import Link from "next/link";
 
 
+export const runtime = "edge";
+
 type GenreCardProps = {
     key: number;
     name: string;
